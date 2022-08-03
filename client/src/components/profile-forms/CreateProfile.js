@@ -3,7 +3,9 @@ import { useDispatch } from 'react-redux';
 import { createProfile } from '../../actions/profile';
 import { useNavigate, NavLink } from 'react-router-dom';
 import Alert from '../layout/Alert';
+import FileBase64 from 'react-file-base64';
 import './form.css'
+
 
 
 const CreateProfile = () => {
@@ -19,7 +21,9 @@ const CreateProfile = () => {
         facebook: '',
         linkedin: '',
         youtube: '',
-        instagram: ''
+        instagram: '',
+        wallpaper: '',
+        avatar: ''
     });
 
     const [displaySocialInputs, toggleSocialinputs] = useState(false);
@@ -49,6 +53,14 @@ const CreateProfile = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         dispatch(createProfile(formData, navigate))
+    }
+
+    const onWallpaperDone = (base64) => {
+        setFormData({ ...formData, wallpaper: base64 });
+    }
+
+    const onAvatarDone = (base64) => {
+        setFormData({ ...formData, avatar: base64 });
     }
 
     return (
@@ -119,7 +131,22 @@ const CreateProfile = () => {
                         <textarea placeholder="A short bio of yourself" name="bio" value={bio} onChange={e => onChange(e)}></textarea>
                         <small className="form-text">Tell us a little about yourself</small>
                     </div>
-
+                    <div className="form-group">
+                        <FileBase64
+                            multiple={false}
+                            onDone={({ base64 }) => onWallpaperDone(base64)} />
+                        <small className="form-text">
+                            choose a wallpaper for your bunch
+                        </small>
+                    </div>
+                    <div className="form-group">
+                        <FileBase64
+                            multiple={false}
+                            onDone={({ base64 }) => onAvatarDone(base64)} />
+                        <small className="form-text">
+                            choose an avatar for your bunch
+                        </small>
+                    </div>
                     <div className="my-2">
                         <button onClick={() => toggleSocialinputs(!displaySocialInputs)}
                             type="button" className="btn btn-light"
@@ -160,7 +187,7 @@ const CreateProfile = () => {
 
 
                     <input type="submit" className="btn btn-primary my-1" />
-                    <NavLink className="btn btn-light my-1" to="/my-profile">Go Back</NavLink>
+                    <NavLink className="bunch-edit-button my-1" to="/my-profile">Go Back</NavLink>
                 </form>
             </div>
 

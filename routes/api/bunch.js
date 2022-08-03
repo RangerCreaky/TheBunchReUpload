@@ -134,7 +134,6 @@ router.post("/join", [auth, [
     }
 
     const { bunchId, secret } = req.body;
-    console.log(bunchId, secret);
     try {
         const bunch = await Bunch.findOne({ bunchId });
         const user = await User.findOne({ _id: req.user.id });
@@ -146,7 +145,6 @@ router.post("/join", [auth, [
 
         const isMatch = await bcrypt.compare(secret, bunch.secret);
         if (!isMatch) {
-            console.log('didn;t match');
             return res.status(400).json({ errors: [{ msg: 'Invalid Bunch credentials' }] });
         }
 
@@ -214,11 +212,13 @@ router.post("/join", [auth, [
 
 router.post('/edit', [auth, inBunch], async (req, res) => {
     try {
-        const { name, tag, description } = req.body;
+        const { name, tag, description, wallpaper, avatar } = req.body;
         const newBunchDetails = {};
         if (name) newBunchDetails.name = name;
         if (tag) newBunchDetails.tag = tag;
         if (description) newBunchDetails.description = description;
+        if (wallpaper) newBunchDetails.wallpaper = wallpaper;
+        if (avatar) newBunchDetails.bunchAvatar = avatar;
 
         const bunch = await Bunch.findOneAndUpdate({ _id: req.bunch.id },
             { $set: newBunchDetails },

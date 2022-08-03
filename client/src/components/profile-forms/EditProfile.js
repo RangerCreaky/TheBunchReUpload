@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createProfile, getCurrentProfileAction } from '../../actions/profile';
 import { useNavigate, NavLink } from 'react-router-dom';
 import Alert from '../layout/Alert';
+import FileBase64 from 'react-file-base64';
 import './form.css'
 
 
@@ -29,7 +30,9 @@ const EditProfile = () => {
         facebook: '',
         linkedin: '',
         youtube: '',
-        instagram: ''
+        instagram: '',
+        wallpaper: '',
+        avatar: ''
     }
 
     useEffect(() => {
@@ -61,7 +64,7 @@ const EditProfile = () => {
         // Do the same thing for socials
 
         setFormData(profileData);
-    }, [profile, loading, dispatch, initialFormData]);
+    }, [profile, loading, dispatch]);
 
 
 
@@ -93,6 +96,14 @@ const EditProfile = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         dispatch(createProfile(formData, true, navigate))
+    }
+
+    const onWallpaperDone = (base64) => {
+        setFormData({ ...formData, wallpaper: base64 });
+    }
+
+    const onAvatarDone = (base64) => {
+        setFormData({ ...formData, avatar: base64 });
     }
 
     return (
@@ -161,7 +172,22 @@ const EditProfile = () => {
                     <textarea placeholder="A short bio of yourself" name="bio" value={bio} onChange={e => onChange(e)}></textarea>
                     <small className="form-text">Tell us a little about yourself</small>
                 </div>
-
+                <div className="form-group">
+                    <FileBase64
+                        multiple={false}
+                        onDone={({ base64 }) => onWallpaperDone(base64)} />
+                    <small className="form-text">
+                        choose a wallpaper for your bunch
+                    </small>
+                </div>
+                <div className="form-group">
+                    <FileBase64
+                        multiple={false}
+                        onDone={({ base64 }) => onAvatarDone(base64)} />
+                    <small className="form-text">
+                        choose an avatar for your bunch
+                    </small>
+                </div>
                 <div className="my-2">
                     <button onClick={() => toggleSocialinputs(!displaySocialInputs)}
                         type="button" className="btn btn-light"

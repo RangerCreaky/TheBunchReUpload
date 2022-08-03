@@ -106,7 +106,6 @@ export const getAllProfilesAction = () => async dispatch => {
 export const createProfile = (formData, edit = false, navigate) => async dispatch => {
     setAuthHeader(localStorage.token);
     try {
-        // console.log(formData)
         const config = {
             headers: {
                 'Content-Type': 'application/json'
@@ -146,7 +145,6 @@ export const createProfile = (formData, edit = false, navigate) => async dispatc
 // Add experience
 export const addExperienceAction = (formData, navigate) => async dispatch => {
     try {
-        // console.log(formData)
         const config = {
             headers: {
                 'Content-Type': 'application/json'
@@ -155,7 +153,6 @@ export const addExperienceAction = (formData, navigate) => async dispatch => {
 
         const body = JSON.stringify(formData);
         const response = await axios.put('/api/profile/experience', body, config);
-        console.log(response);
         dispatch(
             {
                 type: UPDATE_PROFILE,
@@ -168,7 +165,6 @@ export const addExperienceAction = (formData, navigate) => async dispatch => {
         // if the profile is newly created then redirect to dashboard
         navigate('/dashboard');
     } catch (error) {
-        console.log(error);
         let errors;
         if (error.response) {
             errors = error.response.data.errors;
@@ -190,7 +186,6 @@ export const addExperienceAction = (formData, navigate) => async dispatch => {
 // Add education
 export const addEducationAction = (formData, navigate) => async dispatch => {
     try {
-        // console.log(formData)
         const config = {
             headers: {
                 'Content-Type': 'application/json'

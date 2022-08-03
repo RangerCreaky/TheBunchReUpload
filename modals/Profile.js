@@ -15,6 +15,9 @@ const profileSchema = new mongoose.Schema({
     company: {
         type: String
     },
+    wallpaperProfile: {
+        type: String
+    },
     website: {
         type: String
     },

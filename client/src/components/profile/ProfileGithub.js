@@ -20,7 +20,7 @@ const ProfileGithub = ({ username }) => {
                     <div className='github-actions'>
                         <div>
                             <h4>
-                                <a href={repo.html_url} target="_blank" rel="noreferrer noopener">
+                                <a href={repo.html_url} target="_blank" class="github-a" rel="noreferrer noopener">
                                     {repo.name}
                                 </a>
                             </h4>

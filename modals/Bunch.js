@@ -21,6 +21,9 @@ const bunchSchema = new mongoose.Schema({
     wallpaper: {
         type: String
     },
+    bunchAvatar: {
+        type: String
+    },
     date: {
         type: Date,
         default: Date.now

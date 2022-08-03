@@ -57,14 +57,14 @@ const Profile = () => {
 
     const onlyForCurrUser = () => {
         if (!profile && auth?.user?._id === id) {
-            return (<NavLink to={'/create-profile'} className="btn btn-primary my-1">
+            return (<NavLink to={'/create-profile'} className="bunch-edit-button my-1">
                 Create Profile
             </NavLink>);
         }
         else if (auth?.user?._id === id) {
             return (
                 <div className="my-2">
-                    <button className='btn btn-danger'>
+                    <button className='btn-danger'>
                         <i className='fas fa-user-minus' onClick={deleteAccount}>Delete My Account</i>
                     </button>
                 </div>
@@ -102,7 +102,7 @@ const Profile = () => {
                     <ProfileGithub username={profile?.githubusername} />
                 )}
 
-                <NavLink to="/profiles" className="btn btn-light" > Back to Profiles </NavLink>
+                <NavLink to="/profiles" className="bunch-edit-button" > Back to Profiles </NavLink>
                 {
                     onlyForCurrUser()
                 }

@@ -35,12 +35,17 @@ const EnterBunch = () => {
             <div className="table-wrapper">
                 <Alert />
 
-                <h2> Following are the bunches that you have previously Joined </h2>
-                <p> Choose the one which you wanted to join, enter it's secret and Tadaaa..! </p>
+                {bunches?.length > 0 ? (<><h2> Following are the bunches that you have previously Joined </h2>
+                    <p> Choose the one which you wanted to join, enter it's secret and Tadaaa..! </p>
 
-                <div className='bunches my-3'>
-                    {renderBunches()}
-                </div>
+                    <div className='bunches my-3'>
+                        {renderBunches()}
+                    </div> </>) : (
+                    <>
+                        <h2> You have not joined any bunch till now </h2>
+                        <p> Join your mates in a bunch or create a new one </p>
+                    </>
+                )}
             </div>
         </>
     )

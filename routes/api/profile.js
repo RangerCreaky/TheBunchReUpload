@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/auth');
 const inBunch = require('../../middleware/bunch');
-const Profile = require('../../modals/Profile')
+const getBunchId = require('../../middleware/getBunchId');
+const Profile = require('../../modals/Profile');
 const User = require('../../modals/User');
 const Post = require('../../modals/Post');
 const Bunch = require('../../modals/Bunch');
@@ -36,7 +37,7 @@ router.get('/me', auth, async (req, res) => {
 // @access  private : He doesn't need to be in a bunch to create a profile or update it
 //                    After update in Schema, we add the bunches array from user schema to the profile schema
 //                    while creating the profile.
-router.post('/', [auth, [
+router.post('/', [auth, getBunchId, [
     check('status', 'status is required')
         .not()
         .isEmpty(),
@@ -61,7 +62,9 @@ router.post('/', [auth, [
         facebook,
         instagram,
         linkedin,
-        twitter
+        twitter,
+        wallpaper,
+        avatar
     } = req.body;
 
     // Build profile object
@@ -74,6 +77,8 @@ router.post('/', [auth, [
     if (bio) profileFields.bio = bio;
     if (status) profileFields.status = status;
     if (githubusername) profileFields.githubusername = githubusername;
+    if (wallpaper) profileFields.wallpaperProfile = wallpaper;
+
     if (skills) {
         profileFields.skills = skills.split(',').map(skill => skill.trim());
     }
@@ -91,25 +96,44 @@ router.post('/', [auth, [
 
     try {
         let profile = await Profile.findOne({ user: req.user.id });
+        let user = await User.findOne({ _id: req.user.id });
+        let bunch;
+        if (req.bunch?.id) {
+            bunch = await Bunch.findOne({ _id: req.bunch.id });
+        }
 
         if (profile) {
             // if profile exists then update the profile
             profile = await Profile.findOneAndUpdate({ user: req.user.id },
                 { $set: profileFields },
                 { new: true });
+            if (avatar) {
+                user.avatar = avatar;
+                bunch.users.map((user) => {
+                    if (user.user.toString() === req.user.id) {
+                        let newObj = user;
+                        newObj.avatar = avatar;
+                        return newObj;
+                    }
+                    return user;
+                });
 
+                await bunch.save();
+            }
+            await user.save();
             return res.json(profile);
         }
 
         // if profile doesn't exist then create the profile
         // if new profile is being created for the first time add the user in it
-        const user = await User.findOne({ _id: req.user.id });
         profileFields.bunches = user.bunches;
-
         profile = new Profile(profileFields);
-
         await profile.save();
-        res.json(profile);
+
+
+
+        await user.save();
+
 
 
     } catch (error) {

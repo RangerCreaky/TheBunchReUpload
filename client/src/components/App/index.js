@@ -26,6 +26,7 @@ import { loadBunchAction } from '../../actions/bunch';
 import CreateBunch from '../bunch/CreateBunch';
 import EnterBunch from '../bunch/EnterBunch';
 import JoinBunch from '../bunch/JoinBunch';
+import NotFound from '../layout/NotFound';
 
 if (localStorage.token) {
   setAuthHeader(localStorage.token);
@@ -180,6 +181,8 @@ const App = () => {
             </PrivateRoute2>
           }
         />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </ Router >
   )

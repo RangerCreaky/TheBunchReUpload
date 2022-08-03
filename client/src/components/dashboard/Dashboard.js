@@ -40,6 +40,14 @@ const Dashboard = () => {
         slider.scrollLeft = slider.scrollLeft + 230;
     }
 
+    const decodeBase64 = () => {
+        if (bunch?.wallpaper) {
+            // let base64ToString = Buffer.from(bunch?.wallpaper, "base64").toString();
+            return <img src={bunch?.wallpaper} alt="wallpaper" className='wallpaper' />
+        }
+        return '';
+    }
+
     if (loading) {
         return <Spinner />
     }
@@ -49,10 +57,10 @@ const Dashboard = () => {
             <div className="bunch-profile">
                 <Alert />
                 <div className="bunch-top-blank">
-
+                    {decodeBase64()}
                 </div>
                 <div className="bunch-middle-details">
-                    <img className="bunch-avatar" src={bunchAvatar} alt="bunch-avatar" />
+                    <img className="bunch-avatar" src={bunch?.bunchAvatar || bunchAvatar} alt="bunch-avatar" />
 
                     <div className="bunch-name">
                         <h2> {bunch?.name} </h2>

@@ -5,8 +5,6 @@ import setAuthHeader from "../utils/setAuthHeader";
 
 export const loadUserAction = () => async dispatch => {
     // First set the token from local storage in ur header
-    console.log("token : ", localStorage.token);
-
     setAuthHeader(localStorage.token);
 
     // Now make a call to the endpoint api/users
@@ -40,7 +38,6 @@ export const loginAction = ({ email, password }) => async dispatch => {
         const body = JSON.stringify({ email, password });
 
         const response = await axios.post('/api/auth', body, config);
-        // console.log(response);
         dispatch(
             {
                 type: LOGIN_SUCCESS,
@@ -56,8 +53,7 @@ export const loginAction = ({ email, password }) => async dispatch => {
         const errors = err.response.data.errors;
         // If there is an error then we need to show that error
         // this error is an array of errors
-        console.log(err);
-        errors.map((error) => dispatch(setAlert(error, 'danger')));
+        errors.map((error) => dispatch(setAlert(error.msg, 'danger')));
 
         // Now dispatch the failure register
         // Here the reducer just removes the token from localStorage

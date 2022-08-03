@@ -132,7 +132,6 @@ export const addPostAction = (formData) => async dispatch => {
         const response = await axios.post(`/api/posts`, {
             text: formData
         });
-        // console.log(response);
         dispatch({
             type: ADD_POST,
             payload: response.data
@@ -140,7 +139,6 @@ export const addPostAction = (formData) => async dispatch => {
 
         dispatch(setAlert('post created', 'success'));
     } catch (error) {
-        // console.log(error);
         dispatch(
             {
                 type: POST_ERROR,
@@ -159,7 +157,6 @@ export const addCommentAction = (postid, formData) => async dispatch => {
         const response = await axios.post(`/api/posts/comment/${postid}`, {
             text: formData
         });
-        // console.log(response);
         dispatch({
             type: ADD_COMMENT,
             payload: response.data

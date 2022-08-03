@@ -7,7 +7,15 @@ const ProfileTop = ({ profile, id }) => {
 
     const auth = useSelector((state) => {
         return state.auth;
-    })
+    });
+
+    const decodeBase64 = () => {
+        if (profile?.wallpaperProfile) {
+            // let base64ToString = Buffer.from(bunch?.wallpaper, "base64").toString();
+            return <img src={profile?.wallpaperProfile} alt="wallpaper" className='wallpaper' />
+        }
+        return '';
+    }
 
     if (!profile && id === auth?.user?._id) {
         return (<h2> You have not created your profile </h2>);
@@ -30,7 +38,7 @@ const ProfileTop = ({ profile, id }) => {
     return (
         <>
             <div className="bunch-top-blank">
-
+                {decodeBase64()}
             </div>
             <div className="bunch-middle-details">
                 <img className="bunch-avatar" src={user?.avatar} alt="bunch-avatar" />

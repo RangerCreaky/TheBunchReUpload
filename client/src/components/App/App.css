@@ -689,7 +689,18 @@ button {
   z-index: 2;
 }
 
+input::placeholder {
+  font-family: 'Montserrat', sans-serif !important;
+}
 
+input {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.github-a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
 
 /* Bunch landing */
 /* Bunch Landing starts here */
@@ -699,7 +710,6 @@ button {
   flex-direction: column;
   justify-content: flex-end;
   transform: translateY(-40%);
-  font-family: var(--bs-font-sans-serif);
 }
 
 .attribution {
@@ -739,6 +749,7 @@ h1:last-of-type {
 }
 
 .box {
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0px 30px 40px -20px var(--grayishBlue);
   padding: 30px;
@@ -1083,6 +1094,27 @@ img {
 .bunch-users-title {
   text-align: center;
   margin: 1rem 0;
+}
+
+.wallpaper {
+  width: 100%;
+  height: 100%;
+}
+
+input[type=file]::file-selector-button {
+  text-align: center;
+  /* width: 8rem; */
+  padding: 0.5rem;
+  margin: 0 20px 0 0;
+  /* display: block; */
+  text-decoration: none;
+  background-color: whitesmoke;
+  border: 1px solid black;
+
+}
+
+input[type=file] {
+  width: 100%;
 }
 
 /* dashboard ends here */
