@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://navaneeth:helloworld@cluster0.iseiu.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret": "my secret token",
+    "githubClientId": "e34590969978c71636d0",
+    "githubSecret": "70e1c71fa18649a43b579d8fef55354ab435834d "
+}
