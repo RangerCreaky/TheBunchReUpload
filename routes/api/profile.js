@@ -24,7 +24,7 @@ router.get('/me', auth, async (req, res) => {
             return res.status(400).json({ errors: "there is no profile for this user" });
         }
 
-        res.json(profile);
+        return res.json(profile);
 
     } catch (error) {
         console.error(error.message);
@@ -101,26 +101,28 @@ router.post('/', [auth, getBunchId, [
         if (req.bunch?.id) {
             bunch = await Bunch.findOne({ _id: req.bunch.id });
         }
-
         if (profile) {
             // if profile exists then update the profile
             profile = await Profile.findOneAndUpdate({ user: req.user.id },
                 { $set: profileFields },
                 { new: true });
+
             if (avatar) {
                 user.avatar = avatar;
-                bunch.users.map((user) => {
-                    if (user.user.toString() === req.user.id) {
-                        let newObj = user;
-                        newObj.avatar = avatar;
-                        return newObj;
-                    }
-                    return user;
-                });
+                if (bunch) {
+                    bunch.users.map((user) => {
+                        if (user.user.toString() === req.user.id) {
+                            let newObj = user;
+                            newObj.avatar = avatar;
+                            return newObj;
+                        }
+                        return user;
+                    });
+                    await bunch.save();
+                }
 
-                await bunch.save();
+                await user.save();
             }
-            await user.save();
             return res.json(profile);
         }
 
@@ -128,17 +130,14 @@ router.post('/', [auth, getBunchId, [
         // if new profile is being created for the first time add the user in it
         profileFields.bunches = user.bunches;
         profile = new Profile(profileFields);
+
         await profile.save();
-
-
-
         await user.save();
-
-
+        return res.json(profile);
 
     } catch (error) {
-        console.error(error.message);
-        res.status(500).send('server error');
+        console.error(error);
+        // res.send("server error");
     }
 });
 
@@ -152,7 +151,7 @@ router.get('/', [auth, inBunch], async (req, res) => {
     try {
         const id = ObjectId(req.bunch.id);
         const profiles = await Profile.find({ 'bunches.bunch': req.bunch.id }).populate('user', ['name', 'avatar']);
-        res.json(profiles);
+        return res.json(profiles);
     } catch (error) {
         console.error(error);
         res.status(500).send('server error');
@@ -164,6 +163,7 @@ router.get('/', [auth, inBunch], async (req, res) => {
 // @access  public
 router.get('/:user_id', [auth, inBunch], async (req, res) => {
     try {
+        console.log("hello world");
         const profile = await Profile.findOne({ user: req.params.user_id, 'bunches.bunch': req.bunch.id }).populate('user', ['name', 'avatar']);
 
         if (!profile) {
@@ -190,7 +190,7 @@ router.put('/experience', [auth, [
     check('company', 'company is required')
         .not()
         .isEmpty(),
-    check('from', 'from date is requires')
+    check('from', 'from date is required')
         .not()
         .isEmpty()
 ]], async (req, res) => {

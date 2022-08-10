@@ -1,23 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import Moment from 'react-moment';
 import Spinner from '../layout/Spinner';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { deleteEducationAction, getProfileByIdAction } from '../../actions/profile';
+import { deleteEducationAction } from '../../actions/profile';
 import { useParams } from 'react-router-dom';
 
 const ProfileEducation = ({ education }) => {
-    const { id } = useParams();
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(getProfileByIdAction(id));
-    }, [dispatch, id]);
     const auth = useSelector((state) => {
         return state.auth;
     });
 
-    const deleteEducation = () => {
-        dispatch(deleteEducationAction());
+    const [id, setId] = useState(useParams().id);
+    if (id === undefined) {
+        setId(auth?.user?._id);
+    }
+
+    const dispatch = useDispatch();
+
+
+
+    const deleteEducation = (id) => {
+        console.log(id);
+        dispatch(deleteEducationAction(id));
     }
 
     if (!education) {
@@ -34,6 +39,7 @@ const ProfileEducation = ({ education }) => {
         from,
         description
     } = education;
+
     return (
         <div className='edu-exp-item'>
             <p className='exp-edu-1'> {degree} {auth?.isAuthenticated &&

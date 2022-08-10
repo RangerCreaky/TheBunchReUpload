@@ -5,7 +5,9 @@ import setAuthHeader from "../utils/setAuthHeader";
 
 export const getCurrentProfileAction = () => async dispatch => {
     try {
+        console.log("hello world");
         const response = await axios.get("/api/profile/me");
+        console.log(response);
         dispatch(
             {
                 type: GET_PROFILE,
@@ -32,6 +34,7 @@ export const getProfileByIdAction = (userid) => async dispatch => {
     // How ever there wont be add experience and all these buttons
     try {
         const response = await axios.get(`/api/profile/${userid}`);
+        console.log(response);
         dispatch(
             {
                 type: GET_PROFILE,
@@ -39,11 +42,12 @@ export const getProfileByIdAction = (userid) => async dispatch => {
             }
         )
     } catch (error) {
+        console.log(error);
         dispatch(
             {
                 type: PROFILE_ERROR,
                 payload: {
-                    msg: error.response.statusText,
+                    msg: error.response.data.msg,
                     status: error.response.status
                 }
             }
@@ -114,6 +118,7 @@ export const createProfile = (formData, edit = false, navigate) => async dispatc
 
         const body = JSON.stringify(formData);
         const response = await axios.post('/api/profile', body, config);
+        console.log("response", response);
         dispatch(
             {
                 type: GET_PROFILE,
@@ -128,6 +133,7 @@ export const createProfile = (formData, edit = false, navigate) => async dispatc
             navigate('/dashboard');
         }
     } catch (error) {
+        console.log(error);
         const errors = error.response.data.errors;
         errors.map((error) => dispatch(setAlert(error.msg, 'danger')));
         dispatch(
@@ -233,7 +239,7 @@ export const deleteExperienceAction = (id) => async dispatch => {
             payload: res.data
         });
 
-        dispatch(setAlert('Experience added', 'success'));
+        dispatch(setAlert('Experience deleted', 'success'));
     } catch (error) {
         if (error.response) {
             dispatch(
@@ -259,7 +265,7 @@ export const deleteEducationAction = (id) => async dispatch => {
             payload: res.data
         });
 
-        dispatch(setAlert('Education added', 'success'));
+        dispatch(setAlert('Education deleted', 'success'));
     } catch (error) {
         if (error.response) {
             dispatch(

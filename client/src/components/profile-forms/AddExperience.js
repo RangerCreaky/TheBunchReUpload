@@ -84,7 +84,7 @@ const AddExperience = () => {
                     ></textarea>
                 </div>
                 <input type="submit" className="btn btn-primary my-1" />
-                <NavLink className="btn btn-light my-1" to="/my-profile">Go Back</NavLink>
+                <NavLink className="btn btn-light my-1" to="/profile/me">Go Back</NavLink>
             </form>
         </section>
     )

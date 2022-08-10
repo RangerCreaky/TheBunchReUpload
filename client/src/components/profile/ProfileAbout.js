@@ -15,15 +15,15 @@ const ProfileAbout = ({ profile }) => {
     return (
         <>
             {bio && <>
-                <div class="bunch-about">
-                    <h3 class="bunch-h4"> BIO </h3>
-                    <p class="bunch-p"> {bio} </p>
+                <div className="bunch-about">
+                    <h3 className="bunch-h4"> BIO </h3>
+                    <p className="bunch-p"> {bio} </p>
                 </div>
             </>}
 
             <div className='profile-skills'>
-                <h2 clssName="text-primary">Skill Set</h2>
-                <div clssName="skills skill-wrapper" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
+                <h2 className="text-primary">Skill Set</h2>
+                <div className="skills skill-wrapper" style={{ marginTop: '1rem', marginBottom: '1rem' }}>
                     {
                         skills.map((skill, index) => {
                             return (<div className="skill-item" key={index}>

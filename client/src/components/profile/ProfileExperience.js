@@ -1,21 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Moment from 'react-moment';
 import Spinner from '../layout/Spinner';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { deleteExperienceAction, getProfileByIdAction } from '../../actions/profile';
-import { Navigate, useParams } from 'react-router-dom';
+import { deleteExperienceAction, getProfileByIdAction, getCurrentProfileAction } from '../../actions/profile';
+import { useParams } from 'react-router-dom';
 
 const ProfileExperience = ({ experience }) => {
     const dispatch = useDispatch();
-    const { id } = useParams();
-
+    const [id, setId] = useState(useParams().id);
     const auth = useSelector((state) => {
         return state.auth;
-    })
+    });
+
+    if (id === undefined) {
+        setId(auth?.user?._id);
+    }
 
     const deleteExperience = (_id) => {
-        dispatch(deleteExperienceAction(id));
+        dispatch(deleteExperienceAction(_id));
         // return (
         //     <Navigate to={`/profile/${id}`} replace />
         // )

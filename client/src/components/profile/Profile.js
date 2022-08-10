@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Alert from '../layout/Alert';
 import Spinner from '../layout/Spinner';
-import { getProfileByIdAction } from '../../actions/profile';
+import { getCurrentProfileAction, getProfileByIdAction } from '../../actions/profile';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
 import ProfileTop from './ProfileTop';
@@ -10,14 +10,7 @@ import ProfileExperience from './ProfileExperience';
 import ProfileEducation from './ProfileEducation';
 import ProfileGithub from './ProfileGithub'
 import { deleteAccountAndProfileAction } from '../../actions/profile';
-const Profile = () => {
-    const dispatch = useDispatch();
-    const { id } = useParams();
-    useEffect(() => {
-        dispatch(getProfileByIdAction(id));
-    }, [dispatch, id]);
-
-
+const Profile = ({ myId = '' }) => {
     const { profile, loading, auth } = useSelector((state) => {
         return {
             profile: state.profile.profile,
@@ -25,6 +18,27 @@ const Profile = () => {
             auth: state.auth
         }
     });
+
+    const [id, setId] = useState(useParams().id);
+
+    const updateId = () => {
+        if (id === undefined) {
+            setId(auth?.user?._id);
+        }
+    }
+
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        if (id) {
+            dispatch(getProfileByIdAction(id));
+        }
+        else if (!id) {
+            dispatch(getCurrentProfileAction());
+            updateId();
+        }
+    }, [dispatch]);
+
 
 
     const renderExperiences = () => {
@@ -77,7 +91,7 @@ const Profile = () => {
     }
     return (
         <>
-            <div class="bunch-profile">
+            <div className="bunch-profile">
                 <Alert />
                 <ProfileTop profile={profile} id={id} />
                 <ProfileAbout profile={profile} />

@@ -52,9 +52,9 @@ const EditBunch = () => {
             </p>
             <form className="form" onSubmit={onSubmit}>
                 <div className="form-group">
-                    <input type="text" placeholder="Name" name="name" value={name} onChange={e => onChange(e)} />
+                    <input type="text" placeholder="Name" name="name" value={name} onChange={e => onChange(e)} disabled />
                     <small className="form-text">
-                        Select a name for your bunch
+                        Name cannot be changed
                     </small>
                 </div>
                 <div className="form-group">

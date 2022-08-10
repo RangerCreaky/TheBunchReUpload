@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import Landing from '../layout/Landing';
 import Navbar from '../layout/Navbar';
@@ -34,6 +34,9 @@ if (localStorage.token) {
 
 const App = () => {
   const dispatch = useDispatch();
+  const id = useSelector((state) => {
+    return state?.auth?.user?._id;
+  });
 
   useEffect(() => {
     if (localStorage.token) {
@@ -119,10 +122,10 @@ const App = () => {
           }
         />
         <Route
-          path="/my-profile"
+          path="/profile/me"
           element={
             <PrivateRoute>
-              <MyProfile />
+              <Profile myId={id} />
             </PrivateRoute>
           }
         />

@@ -125,14 +125,13 @@ const EditProfile = () => {
                         <option value="Junior Developer">Junior Developer</option>
                         <option value="Senior Developer">Senior Developer</option>
                         <option value="Manager">Manager</option>
-                        <option value="Student or Learning">Student or Learning</option>
-                        <option value="Instructor">Instructor or Teacher</option>
+                        <option value="Student or Learning">Student</option>
+                        <option value="Instructor">Instructor</option>
                         <option value="Intern">Intern</option>
                         <option value="Other">Other</option>
                     </select>
                     <small className="form-text"
-                    >Give us an idea of where you are at in your career</small
-                    >
+                    >Give us an idea of where you are at in your career</small>
                 </div>
                 <div className="form-group">
                     <input type="text" placeholder="Company" name="company" value={company} onChange={e => onChange(e)} />
@@ -177,7 +176,7 @@ const EditProfile = () => {
                         multiple={false}
                         onDone={({ base64 }) => onWallpaperDone(base64)} />
                     <small className="form-text">
-                        choose a wallpaper for your bunch
+                        choose a wallpaper for yourself
                     </small>
                 </div>
                 <div className="form-group">
@@ -185,7 +184,7 @@ const EditProfile = () => {
                         multiple={false}
                         onDone={({ base64 }) => onAvatarDone(base64)} />
                     <small className="form-text">
-                        choose an avatar for your bunch
+                        choose an avatar for yourself
                     </small>
                 </div>
                 <div className="my-2">
@@ -228,7 +227,7 @@ const EditProfile = () => {
 
 
                 <input type="submit" className="btn btn-primary my-1" />
-                <NavLink className="btn btn-light my-1" to="/my-profile">Go Back</NavLink>
+                <NavLink className="btn btn-light my-1" to="/profile/me">Go Back</NavLink>
             </form>
         </div>
     )

@@ -10,7 +10,7 @@ const Alert = () => {
     const renderAlerts = () => {
         return alertState.alert.map((alert) => {
             return (
-                <div key={alert.id} className={`alert alert-${alert.alertType}`}>
+                <div key={alert.id} className={`alert alert-bottom alert-${alert.alertType}`}>
                     {alert.msg}
                 </div>
             )

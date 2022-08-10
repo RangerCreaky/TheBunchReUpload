@@ -45,7 +45,7 @@ const ProfileTop = ({ profile, id }) => {
 
                 <div className="bunch-name profile-name-details">
                     <h2> {user?.name} </h2>
-                    <p className="p-profile">{status} {company && <span> at {company}</span>}</p>
+                    <p className="p-profile">{status} <br /> {" "} {company && <span> at {company}</span>}</p>
                     <p className="p-profile profile-location"> {location && <span> {location}</span>} </p>
                     {auth?.isAuthenticated &&
                         auth?.loading === false && auth?.user &&

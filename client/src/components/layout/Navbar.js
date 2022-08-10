@@ -49,7 +49,7 @@ const Navbar = () => {
                 </li>
                 <li className="navbar-contents-li">
                     {/* Dashboard is to show bunch data */}
-                    <NavLink to={`/profile/${user?._id}`} className="navbar-contents-name-a">
+                    <NavLink to={`/profile/me`} className="navbar-contents-name-a">
                         <i className="fas fa-user"></i>{' '}
                     </NavLink>
                 </li>
@@ -61,7 +61,7 @@ const Navbar = () => {
         return (
             <ul className="navbar-contents-ul">
                 <li className="navbar-contents-li">
-                    <NavLink to={`/profile/${user?._id}`} className="navbar-contents-name-a">
+                    <NavLink to={`/profile/me`} className="navbar-contents-name-a">
                         <i className="fas fa-user"></i>{' '}
                     </NavLink>
                 </li>
@@ -72,7 +72,7 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li className="navbar-contents-li"><NavLink to="/profiles" className="navbar-contents-name-a">Profiles</NavLink></li>
-                <li className="navbar-contents-li"><NavLink to="/posts" className="navbar-contents-name-a"><i class="fas fa-usps"></i>Posts</NavLink></li>
+                <li className="navbar-contents-li"><NavLink to="/posts" className="navbar-contents-name-a"><i className="fas fa-usps"></i>Posts</NavLink></li>
                 <li className="navbar-contents-li">
                     {/* Dashboard is to show bunch data */}
                     <NavLink to="/dashboard" className="navbar-contents-name-a">

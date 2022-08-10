@@ -214,7 +214,6 @@ router.post('/edit', [auth, inBunch], async (req, res) => {
     try {
         const { name, tag, description, wallpaper, avatar } = req.body;
         const newBunchDetails = {};
-        if (name) newBunchDetails.name = name;
         if (tag) newBunchDetails.tag = tag;
         if (description) newBunchDetails.description = description;
         if (wallpaper) newBunchDetails.wallpaper = wallpaper;
