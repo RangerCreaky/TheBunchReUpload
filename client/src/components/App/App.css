@@ -983,9 +983,17 @@ img {
 
 .bunch-middle-details {
   display: flex;
+  justify-content: space-between;
+}
+
+.begin {
+  display: flex;
   flex-direction: row;
-  /* width: 66%; */
-  margin: auto;
+  width: 70%;
+}
+
+.copy {
+  cursor: pointer;
 }
 
 .bunch-about {

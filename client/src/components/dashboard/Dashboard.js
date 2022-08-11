@@ -48,6 +48,10 @@ const Dashboard = () => {
         return '';
     }
 
+    const copy = () => {
+        navigator.clipboard.writeText(bunch?.bunchId);
+    }
+
     if (loading) {
         return <Spinner />
     }
@@ -60,12 +64,18 @@ const Dashboard = () => {
                     {decodeBase64()}
                 </div>
                 <div className="bunch-middle-details">
-                    <img className="bunch-avatar" src={bunch?.bunchAvatar || bunchAvatar} alt="bunch-avatar" />
+                    <div className='begin'>
+                        <img className="bunch-avatar" src={bunch?.bunchAvatar || bunchAvatar} alt="bunch-avatar" />
 
-                    <div className="bunch-name">
-                        <h2> {bunch?.name} </h2>
-                        <p className="bunch-p"> {bunch?.tag} </p>
-                        <NavLink to="/edit-bunch" className="bunch-edit-button" > Edit details </NavLink>
+                        <div className="bunch-name">
+                            <h2> {bunch?.name} </h2>
+                            <p className="bunch-p"> {bunch?.tag} </p>
+                            <NavLink to="/edit-bunch" className="bunch-edit-button" > Edit details </NavLink>
+                        </div>
+                    </div>
+
+                    <div className="bunchID">
+                        <button className="bunch-edit-button copy" onClick={copy}> Copy BunchId </button>
                     </div>
                 </div>
                 <div className="bunch-about">
