@@ -30,18 +30,18 @@ All the features of the application are briefly described here.
 </p>
 
 #### Create new bunch <img width="30px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/build.jpg" alt="Material Bread logo">
-Take the lead, and create a new bunch for your group.
-- To start with Enter some Funky / unique / decent or any kind of name for your bunch
-- Every bunch needs a secret. Share it only with those people whom you want to invite into your bunch.
+Take the lead :briefcase:, and create a new bunch for your group.
+- To start with Enter some :dark_sunglasses: Funky / cool / unique / decent or any kind of name for your bunch
+- Every bunch needs a secret 🤫. Share it only with those people whom you want to invite into your bunch.
 - Make sure your secret is atleast of 12 characters.
 
-#### Join a new Bunch
+#### Join a new Bunch <img width="30px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/join.jpg" alt="Material Bread logo">
 If you wish to join a Bunch which has already been created by your friend / colleague,
-- Ask for the name and secret of the bunch.
+- Ask for the name and secret 🤫 of the bunch.
 - Click Join
 
-#### Enter into already joined Bunches.
-Feel irritated looking at the repetititve work, of entering names everytime?
+#### Enter into already joined Bunches. <img width="30px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/enter.jpg" alt="Material Bread logo">
+Feel irritated :sleepy: looking at the repetititve work, of entering names everytime?
 Worry not! We have got that covered too :relieved: 
 - Hit Enter Bunch
 - You will find the list of the bunches
