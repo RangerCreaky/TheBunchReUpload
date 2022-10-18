@@ -109,15 +109,17 @@ You are most welcomed to report a bug in the [issues](https://github.com/RangerC
 I will be happy to know you are using this application.
 
 ## :magnet: Connect with me.
-<a href="https://www.linkedin.com/in/navaneeth-penumarthi-158a811a0/" target="_blank" rel="noopener noreferrer">
-     <i className="fas fa-linkedin fa-2x"></i>
-</a>
-<a href="https://www.instagram.com/great_nav/?hl=en" target="_blank" rel="noopener noreferrer">
-     <i className="fas fa-instagram fa-2x"></i>
-</a>
-<a href="https://twitter.com/Infinty_slap" target="_blank" rel="noopener noreferrer">
-     <i className="fas fa-twitter fa-2x"></i>
-</a>
+<div>
+    <a href="https://www.linkedin.com/in/navaneeth-penumarthi-158a811a0/" target="_blank" rel="noopener noreferrer">
+         <i className="fas fa-linkedin fa-2x"></i>
+    </a>
+    <a href="https://www.instagram.com/great_nav/?hl=en" target="_blank" rel="noopener noreferrer">
+         <i className="fas fa-instagram fa-2x"></i>
+    </a>
+    <a href="https://twitter.com/Infinty_slap" target="_blank" rel="noopener noreferrer">
+         <i className="fas fa-twitter fa-2x"></i>
+    </a>
+</div>
 
 ## :sun_with_face: Other projects
 Please take a look at other projects of mine :relaxed:.
