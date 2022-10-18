@@ -111,13 +111,13 @@ I will be happy to know you are using this application.
 ## :magnet: Connect with me.
 <p align="center">
     <a href="https://www.linkedin.com/in/navaneeth-penumarthi-158a811a0/" target="_blank" rel="noopener noreferrer">
-          <img src="http://www.foodbanknyc.org/_gfx_/icon-linkedin.png" alt="Linkedin Icon">
+          <img width="40px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/linkedin.jpg" alt="Linkedin Icon">
     </a>
     <a href="https://www.instagram.com/great_nav/?hl=en" target="_blank" rel="noopener noreferrer">
-         <img src="http://tazindaniels.com/wp-content/uploads/2014/10/instagram-transparent.png" alt="Instagram Icon">
+         <img width="40px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/insta.jpg" alt="Linkedin Icon">
     </a>
     <a href="https://twitter.com/Infinty_slap" target="_blank" rel="noopener noreferrer">
-         <img src="http://jonbennallick.co.uk/wp-content/uploads/2012/11/Twitter-Logo-Icon-by-Jon-Bennallick-02-300x300.png" alt="Twitter Icon">
+         <img width="40px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/twitter.jpg" alt="Linkedin Icon">
     </a>
 </p>
 
