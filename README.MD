@@ -91,6 +91,10 @@ Now the best part
     <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/posts.jpg" alt="Material Bread logo">
 </p>
 
-
-
+## :boom: Upcoming features
+These certainly look like very few features, But you know what, it's not!! There are many more features which are being worked upon :fire: 🔥, and soon will be made live :film_projector: .
+Some of them include:
+- Ability to add media and photos in posts :camera:
+- One on One messaging system, with the people in your bunch 💭 .
+and many more...
 
