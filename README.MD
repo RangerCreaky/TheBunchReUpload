@@ -57,7 +57,6 @@ Hurray :open_hands: You have entered into the Bunch.
 #### Create a Profile
 
 <p align="center">
-    
     <ul>
         <li> <img width="100px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunchLanding.jpg" alt="Material Bread logo"> Click on this icon to see your profile. </li>
         <li> Click on Create account if you have not yet created your profile </li>
