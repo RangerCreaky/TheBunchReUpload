@@ -18,6 +18,43 @@ The features in this application include
     <img src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/login.jpg" alt="Material Bread logo">
 </p>
 
+#### Validations : 
+- Name is required.
+- Email is required.
+- Password should be a minimum of length 6.
+
+
+### :family_man_man_girl_girl: Enter into a bunch
+<p align="center">
+    <img src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunchLanding.jpg" alt="Material Bread logo">
+</p>
+
+#### Create new bunch
+Take the lead, and create a new bunch for your group.
+- To start with Enter some Funky / unique / decent or any kind of name for your bunch
+- Every bunch needs a secret. Share it only with those people whom you want to invite into your bunch.
+- Make sure your secret is atleast of 12 characters.
+
+#### Join a new Bunch
+If you wish to join a Bunch which has already been created by your friend / colleague,
+- Ask for the name and secret of the bunch.
+- Click Join
+
+#### Enter into already joined Bunches.
+Feel irritated looking at the repetititve work, of entering names everytime?
+Worry not! We have got that covered too :relieved: 
+- Hit Enter Bunch
+- You will find the list of the bunches
+- Just enter the secret of the bunch you want to join.
+
+<p align="center">
+    <img src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/enterBunch.jpg" alt="Material Bread logo">
+</p>
+
+Hurray :open_hands: You have entered into the Bunch.
+
+
+
 
 
 
