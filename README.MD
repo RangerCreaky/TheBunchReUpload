@@ -29,7 +29,7 @@ All the features of the application are briefly described here.
     <img src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunchLanding.jpg" alt="Material Bread logo">
 </p>
 
-#### Create new bunch
+#### Create new bunch <img width="30px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/build.jpg" alt="Material Bread logo">
 Take the lead, and create a new bunch for your group.
 - To start with Enter some Funky / unique / decent or any kind of name for your bunch
 - Every bunch needs a secret. Share it only with those people whom you want to invite into your bunch.
