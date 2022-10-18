@@ -79,6 +79,16 @@ Hurray :open_hands: You have entered into the Bunch.
     <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunch.png" alt="Material Bread logo">
 </p>
 
+## :page_with_curl: Posts
+Now the best part
+- Create a post :scroll: , and share your thoughts :bulb: with all your bunchmates.
+- Only the people joined in your bunch can see all the posts
+- You can like :thumbsup: or 👎: dislike the Posts
+- Add :left_speech_bubble: comments and discuss on the topic.
+<p align="center">
+    <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/posts.jpg" alt="Material Bread logo">
+</p>
+
 
 
 
