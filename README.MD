@@ -70,6 +70,13 @@ Hurray :open_hands: You have entered into the Bunch.
     <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/profile.png" alt="Material Bread logo">
 </p>
 
+### :family_woman_woman_girl_girl: Bunch Info
+#### :pencil2: Edit
+- Any member of a bunch can edit Bunch details.
+- Any member of a bunch can view the Profiles of their bunch mates.
+<p align="center">
+    <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunch.png" alt="Material Bread logo">
+</p>
 
 
 
