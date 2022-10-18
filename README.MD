@@ -109,11 +109,11 @@ You are most welcomed to report a bug in the [issues](https://github.com/RangerC
 I will be happy to know you are using this application.
 
 ## :magnet: Connect with me.
-<p align="center">
-    <a href="https://www.linkedin.com/in/navaneeth-penumarthi-158a811a0/" target="_blank" rel="noopener noreferrer">
+<p>
+    <a href="https://www.linkedin.com/in/navaneeth-penumarthi-158a811a0/" target="_blank" rel="noopener noreferrer" margin-right="20px">
           <img width="40px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/linkedin.png" alt="Linkedin Icon">
     </a>
-    <a href="https://www.instagram.com/great_nav/?hl=en" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.instagram.com/great_nav/?hl=en" target="_blank" rel="noopener noreferrer" margin-right="20px">
          <img width="40px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/insta.png" alt="Linkedin Icon">
     </a>
     <a href="https://twitter.com/Infinty_slap" target="_blank" rel="noopener noreferrer">
