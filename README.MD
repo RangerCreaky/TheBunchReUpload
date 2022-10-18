@@ -15,7 +15,7 @@ The features in this application include
 
 ### :e-mail: Register/Login
 <p align="center">
-    <img src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/login.jpg" alt="Material Bread logo">
+    <img width="50px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/login.jpg" alt="Material Bread logo">
 </p>
 
 #### Validations : 
