@@ -74,6 +74,7 @@ Hurray :open_hands: You have entered into the Bunch.
 #### :pencil2: Edit
 - Any member of a bunch can edit Bunch details.
 - Any member of a bunch can view the Profiles of their bunch mates.
+- Copy the bunch id and share it with the people you want to invite!!
 <p align="center">
     <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunch.png" alt="Material Bread logo">
 </p>
