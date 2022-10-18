@@ -98,3 +98,32 @@ Some of them include:
 - One on One messaging system, with the people in your bunch 💭 .
 and many more...
 
+## 🐛 Report a Bug
+Errors and mistakes are a part of our lives. I sincerely apologize if there are any unsolved errors in this application
+You are most welcomed to report a bug in the [issues](https://github.com/RangerCreaky/TheBunchReUpload/issues) tab on GitHub.
+
+## :scroll: Feature upgrade or request
+- Please feel free to [open an issue](https://github.com/RangerCreaky/TheBunchReUpload/issues) on GitHub, for any feature to be added or updated.
+- Convey them to me through my socials :camera_flash:.
+- Code any feature and [contribute](https://github.com/RangerCreaky/TheBunchReUpload/pulls) to this repository.
+I will be happy to know you are using this application.
+
+## :magnet: Connect with me.
+<a href="https://www.linkedin.com/in/navaneeth-penumarthi-158a811a0/" target="_blank" rel="noopener noreferrer">
+     <i className="fas fa-linkedin fa-2x"></i>
+</a>
+<a href="https://www.instagram.com/great_nav/?hl=en" target="_blank" rel="noopener noreferrer">
+     <i className="fas fa-instagram fa-2x"></i>
+</a>
+<a href="https://twitter.com/Infinty_slap" target="_blank" rel="noopener noreferrer">
+     <i className="fas fa-twitter fa-2x"></i>
+</a>
+
+## :sun_with_face: Other projects
+Please take a look at other projects of mine :relaxed:.
+- [Pathfinding visualizer](https://tangerine-bienenstitch-682c23.netlify.app/)
+- [SCHEMCON 2022: Event](http://cms.nitw.ac.in/schemcon/index.html#hero)
+
+
+
+made with ❤️ by Navaneeth Penumarthi
