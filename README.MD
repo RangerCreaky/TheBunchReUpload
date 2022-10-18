@@ -54,6 +54,7 @@ Worry not! We have got that covered too :relieved:
 Hurray :open_hands: You have entered into the Bunch.
 
 ### :supervillain_man: Profile
+
 #### Create a Profile
 
 <p align="center">
@@ -71,6 +72,7 @@ Hurray :open_hands: You have entered into the Bunch.
 </p>
 
 ### :family_woman_woman_girl_girl: Bunch Info
+
 #### :pencil2: Edit
 - Any member of a bunch can edit Bunch details.
 - Any member of a bunch can view the Profiles of their bunch mates.
