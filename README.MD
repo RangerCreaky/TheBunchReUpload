@@ -48,12 +48,28 @@ Worry not! We have got that covered too :relieved:
 - Just enter the secret of the bunch you want to join.
 
 <p align="center">
-    <img src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/enterBunch.jpg" alt="Material Bread logo">
+    <img width="" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/enterBunch.jpg" alt="Material Bread logo">
 </p>
 
 Hurray :open_hands: You have entered into the Bunch.
 
+### :supervillain_man: Profile
+#### Create a Profile
 
+<p align="center">
+    
+    <ul>
+        <li> <img width="100px" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunchLanding.jpg" alt="Material Bread logo"> Click on this icon to see your profile. </li>
+        <li> Click on Create account if you have not yet created your profile </li>
+        <li> Use the ` Edit Profile` button to :pencil2: update your profile. </li> 
+        <li> `Add Education` and `Add Experience` buttons allow you to share information about your :blue_book: schooling and :necktie: work experience. </li>
+        <li> Do add your display and cover photo :blush: </li>
+    </ul>
+</p>
+
+<p align="center">
+    <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/enterBunch.jpg" alt="Material Bread logo">
+</p>
 
 
 
