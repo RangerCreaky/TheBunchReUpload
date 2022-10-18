@@ -12,8 +12,8 @@ The features in this application include
 - Like, comment other posts
 
 ## Get started
-
-### :e-mail: Register/Login
+All the features of the application are briefly described here.
+## :e-mail: Register/Login
 <p align="center">
     <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/login.jpg" alt="Material Bread logo">
 </p>
@@ -24,7 +24,7 @@ The features in this application include
 - Password should be a minimum of length 6.
 
 
-### :family_man_man_girl_girl: Enter into a bunch
+## :family_man_man_girl_girl: Enter into a bunch
 <p align="center">
     <img src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/bunchLanding.jpg" alt="Material Bread logo">
 </p>
@@ -53,7 +53,7 @@ Worry not! We have got that covered too :relieved:
 
 Hurray :open_hands: You have entered into the Bunch.
 
-### :supervillain_man: Profile
+## :supervillain_man: Profile
 
 #### Create a Profile
 
@@ -71,7 +71,7 @@ Hurray :open_hands: You have entered into the Bunch.
     <img width="50%" src="https://github.com/RangerCreaky/TheBunchReUpload/blob/master/snapshots/profile.png" alt="Material Bread logo">
 </p>
 
-### :family_woman_woman_girl_girl: Bunch Info
+## :family_woman_woman_girl_girl: Bunch Info
 
 #### :pencil2: Edit
 - Any member of a bunch can edit Bunch details.
